@@ -15,7 +15,8 @@ requirements:
     - m2w64-toolchain #[win]
     - cmake
     - make
-    - gfortran
+    - {{ compiler('fortran') }} #[not win]
+    - gcc #[not win]
     - git
 
 
