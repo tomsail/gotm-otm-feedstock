@@ -1,0 +1,32 @@
+{% set name = "gotm-otm" %}
+{% set version = "v6.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+build:
+  number: 1
+  script_env:
+    - VERSION={{ version }}
+
+requirements:
+  build:
+    - m2w64-toolchain #[win]
+    - cmake
+    - make
+    - gfortran
+    - git
+
+
+about:
+  home: https://gotm.net/portfolio/software/
+  license: GPLv3
+  summary: "The Aquatic Ecodynamics Modelling Library"
+  doc_url: https://gotm.net/portfolio/software/
+  dev_url: https://github.com/gotm-model/code
+
+extra:
+  recipe-maintainers:
+    - nicogodet
+    - tomsail
