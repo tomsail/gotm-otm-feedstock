@@ -6,6 +6,6 @@ git submodule update --init --recursive
 
 mkdir build
 cd build
-cmake .. -DGOTM_USE_NetCDF:BOOL=OFF -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX:PATH=$PREFIX
+cmake .. -DGOTM_USE_NetCDF:BOOL=OFF -DGOTM_USE_FABM=off  -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX:PATH=$PREFIX
 make
 make install
